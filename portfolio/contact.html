@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Contact Section */
+        .contact-section {
+            display: flex;
+            justify-content: space-between;
+            padding: 0px 20px;
+            background: linear-gradient(to bottom, #f7e7ce, #fff);
+            
+        }
+
+        .contact-info {
+            flex: 1;
+            padding-right: 50px;
+        }
+
+        .contact-info h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .contact-form {
+            flex: 1;
+        }
+
+        .contact-form form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        textarea {
+            height: 100px;
+            resize: none;
+        }
+
+        .submit-btn {
+            background-color: #000;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .submit-btn:hover {
+            background-color: #ffcc00;
+            color: #000;
+        }
+
+        /* Footer Section */
+        footer {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 50px;
+            background-color: #fff;
+            border-top: 1px solid #ccc;
+        }
+
+        .footer-left {
+            flex: 1;
+        }
+
+        .footer-logo {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .footer-left p {
+            max-width: 300px;
+            font-size: 14px;
+        }
+
+        .footer-legal {
+            flex: 1;
+            text-align: center;
+        }
+
+        .footer-legal p {
+            margin-bottom: 10px;
+        }
+
+        .footer-legal a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .footer-social {
+            flex: 1;
+            text-align: right;
+            margin-right: 25px;
+        }
+
+        .footer-social p {
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .footer-social ul {
+            list-style: none;
+        }
+
+        .footer-social ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-social ul li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+        }
+
+        /* Button Styles */
+        .hire-me-btn:hover,
+        .hire-btn:hover {
+            background-color: #ffcc00;
+            color: #000;
+        }
+    </style>
+</head>
+<section class="contact-section" id="contact">
+    <div class="contact-info">
+        <h2>Contact us</h2>
+        <p>We are committed to processing the information in order to contact you and talk about your project.</p>
+        <p>Address: Rwanda, Kicukiro, KK 24 Street</p>
+        <p>Phone: +250 785 024 63</p>
+        <p>Email: blaiseniyonsenga@gmail.com</p>
+    </div>
+    <div class="contact-form">
+        <form>
+            <div class="form-group">
+                <input type="text" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+                <input type="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+                <textarea placeholder="Your Message" required></textarea>
+            </div>
+            <button class="submit-btn" type="submit">Send Message</button>
+        </form>
+    </div>
+</section>

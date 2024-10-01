@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+
+        /* Navbar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 20px;
+            background-color: #000;
+        }
+
+        nav .logo {
+            color: #fff;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .hire-btn {
+            background-color: #fff;
+            color: #000;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Testimonial Section */
+        .testimonial-section {
+            width: 60%;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .testimonial-header {
+            color: orange;
+            font-size: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .testimonial-title {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-content {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #555;
+            margin: 20px 0;
+            position: relative;
+        }
+
+        .testimonial-content::before,
+        .testimonial-content::after {
+            content: "“";
+            font-size: 40px;
+            color: #ccc;
+            position: absolute;
+        }
+
+        .testimonial-content::before {
+            left: -30px;
+            top: -10px;
+        }
+
+        .testimonial-content::after {
+            content: "”";
+            right: -30px;
+            bottom: -10px;
+        }
+
+        .testimonial-author {
+            margin-top: 10px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .testimonial-role {
+            font-size: 14px;
+            color: #999;
+        }
+
+        .testimonial-icon {
+            font-size: 50px;
+            color: #ccc;
+            margin-bottom: 20px;
+        }
+
+        /* Footer Section */
+        footer {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 50px;
+            background-color: #fff;
+            border-top: 1px solid #ccc;
+            width: 100%;
+        }
+
+        .footer-left {
+            flex: 1;
+        }
+
+        .footer-logo {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .footer-left p {
+            max-width: 300px;
+            font-size: 14px;
+        }
+
+        .footer-legal {
+            flex: 1;
+            text-align: center;
+        }
+
+        .footer-legal p {
+            margin-bottom: 10px;
+        }
+
+        .footer-legal a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .footer-social {
+            flex: 1;
+            text-align: right;
+            margin-right: 25px;
+        }
+
+        .footer-social p {
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .footer-social ul {
+            list-style: none;
+        }
+
+        .footer-social ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-social ul li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">Blaise</div>
+        <ul>
+            <li><a href="index.html">About Me</a></li>
+            <li><a href="myservice.html">Services</a></li>
+            <li><a href="myproject.html">My Project</a></li>
+            <li><a href="testimonial.html">Testimonials</a></li>
+            <li><a href="index.html">Contact Me</a></li>
+        </ul>
+        <button class="hire-btn">Hire Me</button>
+    </nav>
+
+    <!-- Testimonial Section -->
+    <div class="testimonial-section">
+        <div class="testimonial-header">Testimonials</div>
+        <div class="testimonial-title">What People Say</div>
+        <div class="testimonial-icon">👤</div>
+        <div class="testimonial-content">
+            I appreciate the professionalism and efficiency of the staff, consistent services, which have exceeded my expectations and allowed me to focus on core tasks. The team's agility significantly enhances my productivity and makes a positive impact on my business.
+        </div>
+        <div class="testimonial-author">Businessman</div>
+        <div class="testimonial-role">Client / Businessman</div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-left">
+            <div class="footer-logo">Blaise Niyonsenga</div>
+            <p>Full-Stack Web Developer | UI/UX Designer</p>
+        </div>
+        <div class="footer-legal">
+            <p>&copy; 2024 Blaise Niyonsenga. All Rights Reserved.</p>
+        </div>
+        <div class="footer-social">
+            <p>Follow Me</p>
+            <ul>
+                <li><a href="#"><img src="linkedin.png" style="width: 20px;height: 20px;">LinkedIn</a></li>
+                <li><a href="#"><img src="facebook.png" style="width: 20px;height: 20px;">Facebook</a></li>
+                <li><a href="#"><img src="twitter.png" style="width: 20px;height: 20px;">Twitter</a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+</html>

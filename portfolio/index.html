@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blaise Niyonsenga - Web Developer</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        /* Navbar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #000;
+        }
+
+        nav .logo {
+            color: #fff;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .hire-btn {
+            background-color: #fff;
+            color: #000;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero, .about-me, .contact-section {
+            display: none; /* Hide all sections by default */
+        }
+
+        .hero.active, .about-me.active, .contact-section.active {
+            display: flex; /* Show the active section */
+        }
+
+        .hero {
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px;
+            background: linear-gradient(to bottom, #f7e7ce, #fff);
+        }
+
+        .hero-content {
+            flex: 1;
+        }
+
+        .hero-content h1 {
+            font-size: 40px;
+        }
+
+        .hero-content h1 span {
+            color: #ffcc00;
+        }
+
+        .hero-content h2 {
+            font-size: 24px;
+            margin-top: 10px;
+        }
+
+        .hero-content p {
+            margin: 20px 0;
+            max-width: 500px;
+        }
+
+        .hire-me-btn {
+            background-color: #000;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .hero-image {
+            flex: 1;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /* About Me Section */
+        .about-me {
+            display: flex;
+            padding: 50px;
+            background-color: #f9f9f9;
+        }
+
+        .about-image {
+            flex: 1;
+        }
+
+        .about-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .about-content {
+            flex: 1;
+            padding-left: 50px;
+        }
+
+        .about-content h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .about-content p {
+            margin-bottom: 30px;
+            max-width: 500px;
+        }
+
+        .about-icons {
+            display: flex;
+            gap: 50px;
+        }
+
+        .about-icons div {
+            text-align: center;
+        }
+
+        .about-icons h4 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .about-icons p {
+            font-size: 18px;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            display: flex;
+            justify-content: space-between;
+            padding: 0px 20px;
+            background: linear-gradient(to bottom, #f7e7ce, #fff);
+            
+        }
+
+        .contact-info {
+            flex: 1;
+            padding-right: 50px;
+        }
+
+        .contact-info h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .contact-form {
+            flex: 1;
+        }
+
+        .contact-form form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        textarea {
+            height: 100px;
+            resize: none;
+        }
+
+        .submit-btn {
+            background-color: #000;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .submit-btn:hover {
+            background-color: #ffcc00;
+            color: #000;
+        }
+
+        /* Footer Section */
+        footer {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 50px;
+            background-color: #fff;
+            border-top: 1px solid #ccc;
+        }
+
+        .footer-left {
+            flex: 1;
+        }
+
+        .footer-logo {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .footer-left p {
+            max-width: 300px;
+            font-size: 14px;
+        }
+
+        .footer-legal {
+            flex: 1;
+            text-align: center;
+        }
+
+        .footer-legal p {
+            margin-bottom: 10px;
+        }
+
+        .footer-legal a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .footer-social {
+            flex: 1;
+            text-align: right;
+            margin-right: 25px;
+        }
+
+        .footer-social p {
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .footer-social ul {
+            list-style: none;
+        }
+
+        .footer-social ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-social ul li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+        }
+
+        /* Button Styles */
+        .hire-me-btn:hover,
+        .hire-btn:hover {
+            background-color: #ffcc00;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">Blaise</div>
+        <ul>
+            <li><a href="#" onclick="showSection('me')">About Me</a></li>
+            <li><a href="myservice.html">Services</a></li>
+            <li><a href="myproject.html">My Project</a></li>
+            <li><a href="testmonial.html">Testimonials</a></li>
+            <li><a href="#contact">Contact Me</a></li>
+        </ul>
+        <button class="hire-btn">Hire Me</button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero active">
+        <div class="hero-content">
+            <h1>Hello, I am <span>Blaise Niyonsenga</span></h1>
+            <h2>Web Developer</h2>
+            <p>I'm a top web developer and digital design expert, capable of developing complete front-end websites and designing intuitive UI/UX experiences. Additionally, I have experience working as a virtual assistant, managing tasks efficiently.</p>
+            <button class="hire-me-btn">Hire me</button>
+        </div>
+        <div class="hero-image">
+            <img src="person1.png" alt="Blaise Niyonsenga" style="height: 250px; width: 150px; margin-left: 150px;">
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section class="about-me" id="me">
+        <div class="about-image">
+            <img src="person.jpeg" alt="Blaise Niyonsenga" style="height: 400px; width: 300px;">
+        </div>
+        <div class="about-content">
+            <h3>About Me</h3>
+            <p>Blaise is a web developer skilled in creating websites and designing user interfaces (UI) and user experiences (UX). They have a strong ability to design and refine digital experiences for optimal functionality and aesthetics.</p>
+            <div class="about-icons">
+                <div>
+                    <h4>2</h4>
+                    <p>Projects</p>
+                </div>
+                <div>
+                    <h4>24/7</h4>
+                    <p>Customer Support</p>
+                </div>
+            </div>
+            <button class="hire-me-btn">Hire me</button>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="contact-info">
+            <h2>Contact us</h2>
+            <p>We are committed to processing the information in order to contact you and talk about your project.</p>
+            <p>Address: Rwanda, Kicukiro, KK 24 Street</p>
+            <p>Phone: +250 785 024 63</p>
+            <p>Email: blaiseniyonsenga@gmail.com</p>
+        </div>
+        <div class="contact-form">
+            <form>
+                <div class="form-group">
+                    <input type="text" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Your Message" required></textarea>
+                </div>
+                <button class="submit-btn" type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-left">
+            <div class="footer-logo">Blaise</div>
+            <p>&copy; 2024 Blaise Niyonsenga. All rights reserved.</p>
+        </div>
+        <div class="footer-legal">
+            <p><a href="#">Terms of Service</a> | <a href="#">Privacy Policy</a></p>
+        </div>
+        <div class="footer-social">
+            <p>Follow me:</p>
+            <ul>
+                <li><a href="#"><img src="linkedin.png" style="width: 20px;height: 20px;">LinkedIn</a></li>
+                <li><a href="#"><img src="facebook.png" style="width: 20px;height: 20px;">Facebook</a></li>
+                <li><a href="#"><img src="twitter.png" style="width: 20px;height: 20px;">Twitter</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+        function showSection(section) {
+    // Hide all sections
+    const sections = document.querySelectorAll('section');
+    sections.forEach(sec => sec.classList.remove('active'));
+    
+    // Show the selected section
+    const activeSection = document.querySelector('.' + section);
+    if (activeSection) {
+        activeSection.classList.add('active');
+    }
+}
+
+// Show the hero section by default
+showSection('hero');
+
+    </script>
+</body>
+</html>
